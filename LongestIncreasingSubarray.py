@@ -7,10 +7,10 @@ increasing subsequence of a single element is itself. So we go backwards through
 all the elements in front to see what the longest increasing subarray starting from their indices and if it's bigger than the LIS at our current index
 we set ours to 1 + the LIS at theirs"""
 
-    LIS = [1]*len(arr)
+    ans = [1]*len(arr)
     for i in range(len(arr)-1,-1,-1): #this iterates through the list backward
         for j in range(i+1,len(arr)): #this goes from the previous pointer to the end of the list
             if arr[i] < arr[j]: #check to see if the number in front of the number you're currently at is bigger
-            LIS[i] = max(LIS[i], LIS[j]+1) #if the longest increasing subarray starting at pos j > LIS starting at pos i 
+            ans[i] = max(ans[i], ans[j]+1) #if the longest increasing subarray starting at pos j > LIS starting at pos i 
             #make the LIS starting at index i the bigger of the one starting at j + 1 since we're adding i to that subarray and it's own LIS
-  return max(LIS) #return the largest increasing subarray
+  return max(ans) #return the largest increasing subarray
