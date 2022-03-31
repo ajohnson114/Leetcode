@@ -11,6 +11,6 @@ we set ours to 1 + the LIS at theirs"""
     for i in range(len(arr)-1,-1,-1): #this iterates through the list backward
         for j in range(i+1,len(arr)): #this goes from the previous pointer to the end of the list
             if arr[i] < arr[j]: #check to see if the number in front of the number you're currently at is bigger
-            ans[i] = max(ans[i], ans[j]+1) #if the longest increasing subarray starting at pos j > LIS starting at pos i 
-            #make the LIS starting at index i the bigger of the one starting at j + 1 since we're adding i to that subarray and it's own LIS
-  return max(ans) #return the largest increasing subarray
+                ans[i] = max(ans[i], ans[j]+1) #if the longest increasing subarray starting at pos j > LIS starting at pos i 
+                #make the LIS starting at index i the bigger of the one starting at j + 1 since we're adding i to that subarray and it's own LIS
+    return max(ans) #return the value of the largest increasing subarray (each index has the value of the LIS starting at that index)
