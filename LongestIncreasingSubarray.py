@@ -1,9 +1,9 @@
 def LIS(arr):
 
-""""The way to approach this answer is with Dynamic Programming. We want to see what the Longest Increasing Subsequence(LIS) starting at position i is
-one can think that we can come up with a recursive solution where each element asks for all the elements that are bigger than me what is the longest
-increasing subarray starting at their index I'll get that answer and add one to them. From here we build our answer. The base case is 1 as the longest
-increasing subsequence of a single element is itself. So we go backwards through the list and from the pointer that we go backwards from we then check 
+""""The way to approach this answer is with Dynamic Programming. We want to see what the Longest Increasing Subsequence(LIS) starting at position i is.
+One can think that we can come up with a recursive solution where each element asks for all the elements that are bigger than me, what is the longest
+increasing subarray starting at their index, I'll get that answer and add one to them. From here, we build our answer. The base case is 1 as the longest
+increasing subsequence of a single element is itself. So we go backwards through the list and from the pointer that we go backwards with we then check 
 all the elements in front to see what the longest increasing subarray starting from their indices and if it's bigger than the LIS at our current index
 we set ours to 1 + the LIS at theirs"""
 
