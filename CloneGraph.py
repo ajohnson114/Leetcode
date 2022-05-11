@@ -9,7 +9,10 @@ class Node:
 class Solution:
     def cloneGraph(self, node: 'Node') -> 'Node':
         """
-        Use a hashmap and recursive dfs and map the old nodes to the copy nodes. Map the first node to the new node and then go to its first neighbor and start cloning there. For each of the subsequent nodes we'll look to see the neighbors and if those nodes are in the hash map look those up and then connect the copies to the new copy. The base case is when you reach a full cycle and in that case you will cycle all the way back up top and check all your other nodes to see if all connections are made in your starting node.
+        Use a hashmap and recursive dfs and map the old nodes to the copy nodes. Map the first node to the new node and then go to its first neighbor 
+        and start cloning there. For each of the subsequent nodes we'll look to see the neighbors and if those nodes are in the hash map look those up 
+        and then connect the copies to the new copy. The base case is when you reach a full cycle and in that case you will cycle all the way back up 
+        top and check all your other nodes to see if all connections are made in your starting node.
         """
         
         oldtonew = {}
