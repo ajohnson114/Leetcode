@@ -5,7 +5,8 @@ class Solution:
       if there is a cycle you return False and if you've visited it before you know that that course is fine in regards to being able to take prereqs 
       therefore you return True. So when you see a node add it to the cycle set then run dfs on it's children and if all that works out then remove it from
       the cycle and add it to visited. Once you do all that you can add it to ans which is your output variable. Finally, run dfs on all your nodes and if 
-      any of the function calls return False then you should return False. If none of them return False you can return True
+      any of the function calls return False then you should return False. If none of them return False which in this case is an empty list otherwise
+      you can return the answer variable
       """
         prereq = {i:[] for i in range(numCourses)}
         
