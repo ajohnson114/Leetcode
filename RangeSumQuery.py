@@ -64,7 +64,7 @@ class SegmentTree:
             
             if excluded_right_index % 2 ==1:
                 excluded_right_index -=1
-                result_right = self.op(result_right, self.tree[excluded_right_index])
+                result_right = self.op( self.tree[excluded_right_index], result_right)
             
             left_index = left_index//2
             excluded_right_index = excluded_right_index //2
